@@ -1,0 +1,55 @@
+/*accordion 1*/
+
+body {
+	margin-left: 10%;
+}
+
+#box1 input {
+	display: none;
+}
+
+label {
+    display: block;    
+    padding: 10px;
+    background: lightgrey;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 3px;
+    /*transition: ease .5s;*/
+}
+
+#box1 input + label + .desc {
+    display: none;
+}
+
+#box1 input:checked + label + .desc {
+    display: block;
+}
+
+label::after {
+	font-family: "Font Awesome 5 Free";
+	content: '\f054';
+	font-weight: bold;
+	font-size: 22px;
+	position: absolute;
+	right: 1%;
+}
+
+input:checked + label::after {
+	content: '\f078';
+}
+
+/* Accordion 2 */
+
+#box2 .desc1 {
+  display: none;
+}
+
+#box2 input{
+  display: none;
+}
+
+#box2 input:checked~.desc1 {
+	display: block;
+  	color: black;
+}
